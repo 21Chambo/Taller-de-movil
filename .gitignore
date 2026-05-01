@@ -1,0 +1,30 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno
+.env
+.env.local
+.env.production
+
+# Builds
+dist/
+build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Docker
+*.pid
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Ionic / Capacitor
+android/app/build/
+ios/App/build/
+
+# MongoDB local
+data/
