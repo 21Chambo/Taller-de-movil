@@ -1,0 +1,24 @@
+services:
+  mongo:
+    image: mongo:7
+    ports:
+      - "${MONGO_PORT:-27017}:27017"
+    volumes:
+      - app_attendance_mongo_data:/data/db
+
+  api:
+    build: ./back
+    ports:
+      - "${API_PORT:-4000}:4000"
+    depends_on:
+      - mongo
+    env_file:
+      - .env
+
+  app:
+    build: ./app
+    ports:
+      - "${APP_PORT:-8080}:80"
+
+volumes:
+  app_attendance_mongo_data:

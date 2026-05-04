@@ -1,0 +1,30 @@
+{
+  "name": "app-attendance",
+  "version": "1.0.0",
+  "description": "Sistema académico para asistencia con QR temporal",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix back && npm install --prefix app",
+    "dev:api": "npm run dev --prefix back",
+    "dev:app": "npm run dev --prefix app",
+    "build:api": "npm run build --prefix back",
+    "build:app": "npm run build --prefix app",
+    "docker:up": "docker compose up -d --build",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f",
+    "docker:seed": "npm run seed --prefix back",
+    "lint": "npm run lint --prefix back && npm run lint --prefix app",
+    "typecheck": "npm run typecheck --prefix back && npm run typecheck --prefix app",
+    "build": "npm run build:api && npm run build:app"
+  },
+  "keywords": [
+    "attendance",
+    "qr",
+    "ionic",
+    "express",
+    "mongodb",
+    "scorm"
+  ],
+  "author": "",
+  "license": "MIT"
+}
