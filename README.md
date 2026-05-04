@@ -1,26 +1,32 @@
 # App Attendance
 
-Sistema académico para registrar asistencia mediante QR temporal y código de sala.
+Sistema académico para registrar asistencia mediante **QR temporal** y **código de sala**.
 
-El proyecto permite que un docente cree una sesión de asistencia, active un QR, los estudiantes registren su asistencia y luego se puedan consultar presentes, ausentes y rechazos.
+La aplicación permite que un docente o instructor cree una sesión de asistencia, active un QR, permita el registro público de estudiantes y consulte resultados como presentes, ausentes y rechazos.
 
 ---
 
-## Tecnologías
+## Tecnologías utilizadas
 
 ### Frontend
+
 - Ionic React
+- React
 - Vite
 - TypeScript
 
 ### Backend
+
 - Node.js
 - Express
 - TypeScript
 - MongoDB
+- Mongoose
 - JWT
+- Zod
 
 ### Contenedores
+
 - Docker
 - Docker Compose
 
@@ -32,10 +38,8 @@ El proyecto permite que un docente cree una sesión de asistencia, active un QR,
 app-attendance/
 ├── app/                 # Frontend Ionic React
 ├── back/                # Backend Express + TypeScript
-├── db/                  # Base de datos / recursos
-├── docs/                # Documentación
-├── docker-compose.yml
-├── .env.example
+├── docker-compose.yml   # Servicios Docker
+├── .env.example         # Variables de entorno de ejemplo
 ├── .gitignore
 ├── package.json
 └── README.md
